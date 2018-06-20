@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  express:
+    image: reverse-express:latest
+    restart: always
+
+  nginx:
+    image: reverse-nginx:latest
+    ports:
+      - 8080:8080
+    restart: always
